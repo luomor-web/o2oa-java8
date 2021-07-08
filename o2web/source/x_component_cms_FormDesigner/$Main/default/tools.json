@@ -1,0 +1,209 @@
+{
+  "label": {
+    "icon": "label.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.label,
+    "className": "Label"
+  },
+  "textfield": {
+    "icon": "textfield.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.textfield,
+    "className": "Textfield"
+  },
+  "number": {
+    "icon": "number.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.number,
+    "className": "Number"
+  },
+//  "personfield": {
+//    "icon": "personfield.png",
+//    "text": "人员",
+//    "className": "Personfield"
+//  },
+//  "orgfield": {
+//    "icon": "orgfield.png",
+//    "text": "组织",
+//    "className": "Orgfield"
+//  },
+//  "readerfield": {
+//    "icon": "readerfield.png",
+//    "text": "读者",
+//    "className": "Readerfield"
+//  },
+//  "authorfield": {
+//    "icon": "authorfield.png",
+//    "text": "作者",
+//    "className": "Authorfield"
+//  },
+  "org": {
+    "icon": "personfield.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.org,
+    "className": "Org"
+  },
+  "reader": {
+    "icon": "readerfield.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.reader,
+    "className": "Reader"
+  },
+  "author": {
+    "icon": "authorfield.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.author,
+    "className": "Author"
+  },
+  "calendar": {
+    "icon": "calendar.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.calendar,
+    "className": "Calendar"
+  },
+  "textarea": {
+    "icon": "textarea.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.textarea,
+    "className": "Textarea"
+  },
+  "select": {
+    "icon": "select.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.select,
+    "className": "Select"
+  },
+  "radio": {
+    "icon": "radio.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.radio,
+    "className": "Radio"
+  },
+  "checkbox": {
+    "icon": "checkbox.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.checkbox,
+    "className": "Checkbox"
+  },
+  "combox": {
+    "icon": "combox.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.combox,
+    "className": "Combox"
+  },
+  "button": {
+    "icon": "button.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.button,
+    "className": "Button"
+  },
+
+  "Address": {
+    "icon": "address.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.Address,
+    "className": "Address"
+  },
+  "Actionbar": {
+    "icon": "actionbar.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.Actionbar,
+    "className": "Actionbar"
+  },
+
+  "image": {
+    "icon": "image.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.image,
+    "className": "Image"
+  },
+  "imageclipper": {
+    "icon": "imageclipper.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.imageclipper,
+    "className": "ImageClipper"
+  },
+  "attachment": {
+    "icon": "attachment.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.attachment,
+    "className": "Attachment"
+  },
+  "div": {
+    "icon": "div.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.div,
+    "className": "Div"
+  },
+//  "splitdiv": {
+//    "icon": "splitdiv.png",
+//    "text": "分布数据容器",
+//    "className": "Div"
+//  },
+  "table": {
+    "icon": "table.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.table,
+    "className": "Table"
+  },
+  "datagrid": {
+    "icon": "datagrid.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.datagrid,
+    "className": "Datagrid"
+  },
+  "subform": {
+    "icon": "subform.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.subform,
+    "className": "Subform"
+  },
+  "ViewSelector": {
+    "icon": "viewSelector.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.ViewSelector,
+    "className": "ViewSelector"
+  },
+  "view": {
+    "icon": "view.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.view,
+    "className": "View"
+  },
+  "stat": {
+    "icon": "stat.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.stat,
+    "className": "Stat"
+  },
+  "html": {
+    "icon": "html.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.html,
+    "className": "Html"
+  },
+  "common": {
+    "icon": "common.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.common,
+    "className": "Common"
+  },
+  "tab": {
+    "icon": "tabs.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.tab,
+    "className": "Tab"
+  },
+  "tree": {
+    "icon": "tree.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.tree,
+    "className": "Tree"
+  },
+  "iframe": {
+    "icon": "iframe.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.iframe,
+    "className": "Iframe"
+  },
+  "htmledit": {
+    "icon": "htmleditor.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.htmledit,
+    "className": "Htmleditor"
+  },
+  "log": {
+    "icon": "log.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.log,
+    "className": "Log"
+  },
+  "office": {
+    "icon": "office.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.office,
+    "className": "Office"
+  },
+  "comment": {
+    "icon": "comment.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.comment,
+    "className": "Comment"
+  },
+  "statementSelector": {
+    "icon": "statementSelector.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.statementSelector,
+    "className": "StatementSelector"
+  },
+  "statement": {
+    "icon": "statement.png",
+    "text": MWF.xApplication.cms.FormDesigner.LP.modules.statement,
+    "className": "Statement"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "div": {
+    "icon": "div.png",
+    "text": MWF.APPPD.LP.modules.div,
+    "className": "Div"
+  },
+  "label": {
+    "icon": "label.png",
+    "text": MWF.APPPD.LP.modules.label,
+    "className": "Label"
+  },
+  "source": {
+    "icon": "source.png",
+    "text": MWF.APPPD.LP.modules.source,
+    "className": "Source"
+  },
+  "SubSource": {
+    "icon": "subSource.png",
+    "text": MWF.APPPD.LP.modules.subSource,
+    "className": "SubSource"
+  },
+  "sourceText": {
+    "icon": "sourceText.png",
+    "text": MWF.APPPD.LP.modules.sourceText,
+    "className": "SourceText"
+  },
+  "table": {
+    "icon": "table.png",
+    "text": MWF.APPPD.LP.modules.table,
+    "className": "Table"
+  },
+  "tab": {
+    "icon": "tabs.png",
+    "text": MWF.APPPD.LP.modules.tab,
+    "className": "Tab"
+  },
+  "image": {
+    "icon": "image.png",
+    "text": MWF.APPPD.LP.modules.image,
+    "className": "Image"
+  },
+  "button": {
+    "icon": "button.png",
+    "text": MWF.APPPD.LP.modules.button,
+    "className": "Button"
+  },
+  "iframe": {
+    "icon": "iframe.png",
+    "text": MWF.APPPD.LP.modules.iframe,
+    "className": "Iframe"
+  },
+  "html": {
+    "icon": "html.png",
+    "text": MWF.APPPD.LP.modules.html,
+    "className": "Html"
+  },
+  "common": {
+    "icon": "common.png",
+    "text": MWF.APPPD.LP.modules.common,
+    "className": "Common"
+  },
+  "tree": {
+    "icon": "tree.png",
+    "text": MWF.APPPD.LP.modules.tree,
+    "className": "Tree"
+  },
+  "view": {
+    "icon": "view.png",
+    "text": MWF.APPPD.LP.modules.view,
+    "className": "View"
+  },
+  "stat": {
+    "icon": "stat.png",
+    "text": MWF.APPPD.LP.modules.stat,
+    "className": "Stat"
+  },
+  "textfield": {
+    "icon": "textfield.png",
+    "text": MWF.APPPD.LP.modules.textfield,
+    "className": "Textfield"
+  },
+  //  "personfield": {
+  //    "icon": "personfield.png",
+  //    "text": "人员",
+  //    "className": "Personfield"
+  //  },
+  "org": {
+    "icon": "personfield.png",
+    "text": MWF.APPPD.LP.modules.org,
+    "className": "Org"
+  },
+  "calendar": {
+    "icon": "calendar.png",
+    "text": MWF.APPPD.LP.modules.calendar,
+    "className": "Calendar"
+  },
+  "textarea": {
+    "icon": "textarea.png",
+    "text": MWF.APPPD.LP.modules.textarea,
+    "className": "Textarea"
+  },
+  "select": {
+    "icon": "select.png",
+    "text": MWF.APPPD.LP.modules.select,
+    "className": "Select"
+  },
+  "radio": {
+    "icon": "radio.png",
+    "text": MWF.APPPD.LP.modules.radio,
+    "className": "Radio"
+  },
+  "checkbox": {
+    "icon": "checkbox.png",
+    "text": MWF.APPPD.LP.modules.checkbox,
+    "className": "Checkbox"
+  },
+  "widget": {
+    "icon": "subpage.png",
+    "text": MWF.APPPD.LP.modules.widget,
+    "className": "Widget"
+  },
+  "widgetmodules": {
+    "icon": "subpage.png",
+    "text": MWF.APPPD.LP.modules.widgetmodules,
+    "className": "Widgetmodules"
+  },
+  "statement": {
+    "icon": "statement.png",
+    "text": MWF.APPPD.LP.modules.statement,
+    "className": "Statement"
+  },
+  "datagrid": {
+    "icon": "datagrid.png",
+    "text": MWF.APPPD.LP.modules.datagrid,
+    "className": "Datagrid"
+  }
+}

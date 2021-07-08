@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="main" default="default">
+	<property name="VERSION" value="4.3.6" />
+	<property name="preName" value="o2server"/>
+	<property name="targetdir" value="target"/>
+	<target name="default" depends="md5code" />
+	<target name="md5code" depends="default_zip">
+		<checksum file="${preName}-${VERSION}-windows-x64.zip" property="build_win.sha" algorithm="SHA-256" />
+		<length file="${preName}-${VERSION}-windows-x64.zip" property="length_win"/>
+		<script language="javascript">
+			<![CDATA[
+			var length_win_bytes = project.getProperty("length_win");
+			var length_win_kbytes = Math.round((length_win_bytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			var length_win_mbytes = Math.round((length_win_kbytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			project.setNewProperty("length_win_mb", length_win_mbytes);
+		]]>
+		</script>
+		<checksum file="${preName}-${VERSION}-linux-x64.zip" property="build_linux.sha" algorithm="SHA-256" />
+		<length file="${preName}-${VERSION}-linux-x64.zip" property="length_linux"/>
+		<script language="javascript">
+			<![CDATA[
+			var length_linux_bytes = project.getProperty("length_linux");
+			var length_linux_kbytes = Math.round((length_linux_bytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			var length_linux_mbytes = Math.round((length_linux_kbytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			project.setNewProperty("length_linux_mb", length_linux_mbytes);
+		]]>
+		</script>
+		<checksum file="${preName}-${VERSION}-macos.zip" property="build_macos.sha" algorithm="SHA-256" />
+		<length file="${preName}-${VERSION}-macos.zip" property="length_macos"/>
+		<script language="javascript">
+			<![CDATA[
+			var length_macos_bytes = project.getProperty("length_macos");
+			var length_macos_kbytes = Math.round((length_macos_bytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			var length_macos_mbytes = Math.round((length_macos_kbytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			project.setNewProperty("length_macos_mb", length_macos_mbytes);
+		]]>
+		</script>
+		<checksum file="${preName}-${VERSION}-aix.zip" property="build_aix.sha" algorithm="SHA-256" />
+		<length file="${preName}-${VERSION}-aix.zip" property="length_aix"/>
+		<script language="javascript">
+			<![CDATA[
+			var length_aix_bytes = project.getProperty("length_aix");
+			var length_aix_kbytes = Math.round((length_aix_bytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			var length_aix_mbytes = Math.round((length_aix_kbytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			project.setNewProperty("length_aix_mb", length_aix_mbytes);
+		]]>
+		</script>
+		<checksum file="${preName}-${VERSION}-raspi.zip" property="build_raspi.sha" algorithm="SHA-256" />
+		<length file="${preName}-${VERSION}-raspi.zip" property="length_raspi"/>
+		<script language="javascript">
+			<![CDATA[
+			var length_raspi_bytes = project.getProperty("length_raspi");
+			var length_raspi_kbytes = Math.round((length_raspi_bytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			var length_raspi_mbytes = Math.round((length_raspi_kbytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			project.setNewProperty("length_raspi_mb", length_raspi_mbytes);
+		]]>
+		</script>
+		<checksum file="${preName}-${VERSION}-linux-mips.zip" property="build_mips.sha" algorithm="SHA-256" />
+		<length file="${preName}-${VERSION}-linux-mips.zip" property="length_mips"/>
+		<script language="javascript">
+			<![CDATA[
+			var length_mips_bytes = project.getProperty("length_mips");
+			var length_mips_kbytes = Math.round((length_mips_bytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			var length_mips_mbytes = Math.round((length_mips_kbytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			project.setNewProperty("length_mips_mb", length_mips_mbytes);
+		]]>
+		</script>
+		<checksum file="${preName}-${VERSION}-linux-arm.zip" property="build_arm.sha" algorithm="SHA-256" />
+		<length file="${preName}-${VERSION}-linux-arm.zip" property="length_arm"/>
+		<script language="javascript">
+			<![CDATA[
+			var length_arm_bytes = project.getProperty("length_arm");
+			var length_arm_kbytes = Math.round((length_arm_bytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			var length_arm_mbytes = Math.round((length_arm_kbytes / 1024) * Math.pow(10,2))/ Math.pow(10,2);
+			project.setNewProperty("length_arm_mb", length_arm_mbytes);
+		]]>
+		</script>
+		<tstamp>
+			<format property="TODAY" pattern="yyyy-MM-dd HH:mm:ss"/>
+		</tstamp>
+		<echo file="download_preview.jsonp">callback(
+			{
+			"windows": {
+			"system": "windows",
+			"name": "o2server-${VERSION}-windows-x64",
+			"fileName": "o2server-${VERSION}-windows-x64.zip",
+			"fileSize": "${length_win_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-windows-x64.zip",
+			"sha256": "${build_win.sha}"
+			},
+			"linux": {
+			"system": "linux",
+			"name": o2server-${VERSION}-linux-x64",
+			"fileName": "o2server-${VERSION}-linux-x64.zip",
+			"fileSize": "${length_linux_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-linux-x64.zip",
+			"sha256": "${build_linux.sha}"
+			},
+			"macos": {
+			"system": "macos",
+			"name": "o2server-${VERSION}-macos",
+			"fileName": "o2server-${VERSION}-macos.zip",
+			"fileSize": "${length_macos_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-macos.zip",
+			"sha256": "${build_macos.sha}"
+			},
+			"aix": {
+			"system": "aix",
+			"name": "o2server-${VERSION}-aix",
+			"fileName": "o2server-${VERSION}-aix.zip",
+			"fileSize": "${length_aix_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-aix.zip",
+			"sha256": "${build_aix.sha}"
+			},
+			"raspi": {
+			"system": "raspberrypi",
+			"name": "o2server-${VERSION}-raspi.zip",
+			"fileName": "o2server-${VERSION}-raspi.zip",
+			"fileSize": "${length_raspberrypi_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-raspi.zip",
+			"sha256": "${build_raspi.sha}"
+			},
+			"mips": {
+			"system": "mips",
+			"name": "o2server-${VERSION}-linux-mips",
+			"fileName": "o2server-${VERSION}-linux-mips.zip",
+			"fileSize": "${length_mips_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-linux-mips.zip",
+			"sha256": "${build_mips.sha}"
+			},
+			"arm": {
+			"system": "arm",
+			"name": "o2server-${VERSION}-linux-arm",
+			"fileName": "o2server-${VERSION}-linux-arm.zip",
+			"fileSize": "${length_arm_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-linux-arm.zip",
+			"sha256": "${build_arm.sha}"
+			},
+			"jvm_windows": {}
+			}
+			)</echo>
+		<echo file="download-pro.json">{
+			"title": "O2OA V${VERSION}",
+			"publishTime": "${TODAY}",
+			"windows": {
+			"system": "windows",
+			"name": "o2server-${VERSION}-windows-x64",
+			"fileName": "o2server-${VERSION}-windows-x64.zip",
+			"fileSize": "${length_win_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-windows-x64.zip",
+			"sha256": "${build_win.sha}"
+			},
+			"linux": {
+			"system": "linux",
+			"name": "o2server-${VERSION}-linux-x64",
+			"fileName": "o2server-${VERSION}-linux-x64.zip",
+			"fileSize": "${length_linux_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-linux-x64.zip",
+			"sha256": "${build_linux.sha}"
+			},
+			"macos": {
+			"system": "macos",
+			"name": "o2server-${VERSION}-macos",
+			"fileName": "o2server-${VERSION}-macos.zip",
+			"fileSize": "${length_macos_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-macos.zip",
+			"sha256": "${build_macos.sha}"
+			},
+			"aix": {
+			"system": "aix",
+			"name": "o2server-${VERSION}-aix",
+			"fileName": "o2server-${VERSION}-aix.zip",
+			"fileSize": "${length_aix_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-aix.zip",
+			"sha256": "${build_aix.sha}"
+			},
+			"raspi": {
+			"system": "raspi",
+			"name": "o2server-${VERSION}-raspi.zip",
+			"fileName": "o2server-${VERSION}-raspi.zip",
+			"fileSize": "${length_raspi_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-raspi.zip",
+			"sha256": "${build_raspi.sha}"
+			},
+			"mips": {
+			"system": "mips",
+			"name": "o2server-${VERSION}-linux-mips",
+			"fileName": "o2server-${VERSION}-linux-mips.zip",
+			"fileSize": "${length_mips_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-linux-mips.zip",
+			"sha256": "${build_mips.sha}"
+			},
+			"arm": {
+			"system": "arm",
+			"name": "o2server-${VERSION}-linux-arm",
+			"fileName": "o2server-${VERSION}-linux-arm.zip",
+			"fileSize": "${length_arm_mb}MB",
+			"updateTime": "${TODAY}",
+			"url": "/download/o2server-${VERSION}-linux-arm.zip",
+			"sha256": "${build_arm.sha}"
+			},
+			"source":{
+			"name":"o2oa-master",
+			"updateTime":"${TODAY}",
+			"fileSize":"990MB",
+			"url":"https://github.com/o2oa/o2oa"
+			}
+			}</echo>
+	</target>
+	<target name="default_zip" depends="version_o2,zip_windows,zip_linux,zip_macos,zip_aix,zip_raspi,zip_mips,zip_arm" />
+	<target name="version_o2">
+		<tstamp>
+			<format property="TODAY" pattern="yyyy-MM-dd HH:mm:ss"/>
+		</tstamp>
+		<echo file="${targetdir}/o2server/version.o2">{"version":"${VERSION}","date":"${TODAY}"}</echo>
+	</target>
+	<target name="zip_windows">
+		<zip encoding="utf-8" destfile="${preName}-${VERSION}-windows-x64.zip" update="false">
+			<zipfileset dir="${targetdir}/o2server" filemode="777" dirmode="777" encoding="utf-8" prefix="o2server">
+				<include name="commons/"/>
+				<exclude name="commons/ext_java11/" />
+				<include name="configSample/"/>
+				<include name="localSample/"/>
+				<include name="servers/"/>
+				<include name="store/"/>
+				<include name="console.jar"/>
+				<include name="index.html"/>
+				<include name="version.o2"/>
+				<include name="console.jar"/>
+				<include name="jvm/windows/"/>
+				<include name="service_windows.bat"/>
+				<include name="start_windows.bat"/>
+				<include name="start_windows_debug.bat"/>
+				<include name="console_windows.bat"/>
+				<include name="stop_windows.bat"/>
+			</zipfileset>
+		</zip>
+	</target>
+	<target name="zip_linux">
+		<zip encoding="utf-8" destfile="${preName}-${VERSION}-linux-x64.zip" update="false">
+			<zipfileset dir="${targetdir}/o2server" filemode="777" dirmode="777" encoding="utf-8" prefix="o2server">
+				<include name="commons/"/>
+				<exclude name="commons/ext_java11/" />
+				<include name="configSample/"/>
+				<include name="localSample/"/>
+				<include name="servers/"/>
+				<include name="store/"/>
+				<include name="console.jar"/>
+				<include name="index.html"/>
+				<include name="version.o2"/>
+				<include name="console.jar"/>
+				<include name="jvm/linux/"/>
+				<include name="start_linux.sh"/>
+				<include name="start_linux_debug.sh"/>
+				<include name="console_linux.sh"/>
+				<include name="stop_linux.sh"/>
+			</zipfileset>
+		</zip>
+	</target>
+	<target name="zip_macos">
+		<zip encoding="utf-8" destfile="${preName}-${VERSION}-macos.zip" update="false">
+			<zipfileset dir="${targetdir}/o2server" filemode="777" dirmode="777" encoding="utf-8" prefix="o2server">
+				<include name="commons/"/>
+				<exclude name="commons/ext_java11/" />
+				<include name="configSample/"/>
+				<include name="localSample/"/>
+				<include name="servers/"/>
+				<include name="store/"/>
+				<include name="console.jar"/>
+				<include name="index.html"/>
+				<include name="version.o2"/>
+				<include name="console.jar"/>
+				<include name="jvm/macos/"/>
+				<include name="start_macos.sh"/>
+				<include name="start_macos_debug.sh"/>
+				<include name="console_macos.sh"/>
+				<include name="stop_macos.sh"/>
+			</zipfileset>
+		</zip>
+	</target>
+	<target name="zip_aix">
+		<zip encoding="utf-8" destfile="${preName}-${VERSION}-aix.zip" update="false">
+			<zipfileset dir="${targetdir}/o2server" filemode="777" dirmode="777" encoding="utf-8" prefix="o2server">
+				<include name="commons/"/>
+				<exclude name="commons/ext_java11/" />
+				<include name="configSample/"/>
+				<include name="localSample/"/>
+				<include name="servers/"/>
+				<include name="store/"/>
+				<include name="console.jar"/>
+				<include name="index.html"/>
+				<include name="version.o2"/>
+				<include name="console.jar"/>
+				<include name="jvm/aix/"/>
+				<include name="start_aix.sh"/>
+				<include name="start_aix_debug.sh"/>
+				<include name="console_aix.sh"/>
+				<include name="stop_aix.sh"/>
+			</zipfileset>
+		</zip>
+	</target>
+	<target name="zip_raspi">
+		<zip encoding="utf-8" destfile="${preName}-${VERSION}-raspi.zip" update="false">
+			<zipfileset dir="${targetdir}/o2server" filemode="777" dirmode="777" encoding="utf-8" prefix="o2server">
+				<include name="commons/"/>
+				<exclude name="commons/ext_java11/" />
+				<include name="configSample/"/>
+				<include name="localSample/"/>
+				<include name="servers/"/>
+				<include name="store/"/>
+				<include name="console.jar"/>
+				<include name="index.html"/>
+				<include name="version.o2"/>
+				<include name="console.jar"/>
+				<include name="jvm/raspi/"/>
+				<include name="start_raspi.sh"/>
+				<include name="start_raspi_debug.sh"/>
+				<include name="console_raspi.sh"/>
+				<include name="stop_raspi.sh"/>
+			</zipfileset>
+		</zip>
+	</target>
+	<target name="zip_mips">
+		<zip encoding="utf-8" destfile="${preName}-${VERSION}-linux-mips.zip" update="false">
+			<zipfileset dir="${targetdir}/o2server" filemode="777" dirmode="777" encoding="utf-8" prefix="o2server">
+				<include name="commons/"/>
+				<exclude name="commons/ext_java11/" />
+				<include name="configSample/"/>
+				<include name="localSample/"/>
+				<include name="servers/"/>
+				<include name="store/"/>
+				<include name="console.jar"/>
+				<include name="index.html"/>
+				<include name="version.o2"/>
+				<include name="console.jar"/>
+				<include name="jvm/mips/"/>
+				<include name="start_mips.sh"/>
+				<include name="start_mips_debug.sh"/>
+				<include name="console_mips.sh"/>
+				<include name="stop_mips.sh"/>
+			</zipfileset>
+		</zip>
+	</target>
+	<target name="zip_arm">
+		<zip encoding="utf-8" destfile="${preName}-${VERSION}-linux-arm.zip" update="false">
+			<zipfileset dir="${targetdir}/o2server" filemode="777" dirmode="777" encoding="utf-8" prefix="o2server">
+				<include name="commons/"/>
+				<exclude name="commons/ext_java11/" />
+				<include name="configSample/"/>
+				<include name="localSample/"/>
+				<include name="servers/"/>
+				<include name="store/"/>
+				<include name="console.jar"/>
+				<include name="index.html"/>
+				<include name="version.o2"/>
+				<include name="console.jar"/>
+				<include name="jvm/arm/"/>
+				<include name="start_arm.sh"/>
+				<include name="start_arm_debug.sh"/>
+				<include name="console_arm.sh"/>
+				<include name="stop_arm.sh"/>
+			</zipfileset>
+		</zip>
+	</target>
+</project>

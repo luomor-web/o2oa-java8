@@ -1,0 +1,38 @@
+{
+  "none": {
+    "name": MWF.xApplication.cms.FormDesigner.LP.formStyle.noneStyle,
+    "file": "styles_none.json",
+    "mode": [
+      "pc"
+    ]
+  },
+  "default": {
+    "name": MWF.xApplication.cms.FormDesigner.LP.formStyle.defaultStyle,
+    "file": "styles_default.json",
+    "mode": [
+      "pc"
+    ]
+  },
+  "red-simple": {
+    "name": MWF.xApplication.cms.FormDesigner.LP.formStyle.redSimple,
+    "file": "styles_red-simple.json",
+    "mode": [
+      "pc"
+    ]
+  },
+  "blue-simple": {
+    "name": MWF.xApplication.cms.FormDesigner.LP.formStyle.blueSimple,
+    "file": "styles_blue-simple.json",
+    "mode": [
+      "pc"
+    ]
+  },
+  "defaultMobile": {
+    "name": MWF.xApplication.cms.FormDesigner.LP.formStyle.defaultMobileStyle,
+    "file": "styles_defaultMobile.json",
+    "mode": [
+      "pc",
+      "mobile"
+    ]
+  }
+}
